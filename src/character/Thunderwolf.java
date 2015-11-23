@@ -16,6 +16,5 @@ public class Thunderwolf extends Monster {
 		attack = 75 + a * 15;
 		aumor = 50 + a * 50;
 		resistance = 50 + a * 20;
-
 	}
 }

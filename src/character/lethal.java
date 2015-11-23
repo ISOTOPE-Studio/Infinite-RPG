@@ -9,8 +9,8 @@ package character;
  *
  * @author hua
  */
-public class lethal extends Monster {
-	public lethal(int a) {
+public class Lethal extends Monster {
+	public Lethal(int a) {
 		lv = a;
 		health = 500 + a * 75;
 		attack = 75 + a * 15;
