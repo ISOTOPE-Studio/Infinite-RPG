@@ -2,10 +2,10 @@
 package character;
 
 public abstract class Character {
-	int health; // shengmingxhi
-	int lv; // dengji
-	int attack;// wuligongji
-	int aumor;// hujia
-	int resistance;// mokang
+	public int health; // 生命
+	public int lv; // 等级
+	public int attack;// 攻击
+	public int aumor;// 护甲
+	public int resistance;// 魔抗
 
 }

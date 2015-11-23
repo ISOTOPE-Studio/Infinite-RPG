@@ -4,18 +4,22 @@ package character;
 import operation.statusPoint;
 
 public class Player extends Character {
-	int ability;// fashuqiangdu
+	public int ability;// fashuqiangdu
+	public String name;
+	public int money;
 
-	public Player(int h, int at, int au, int r, int ab) {
+	public Player(String n,int h, int at, int au, int r, int ab,int m) {
+		name = n;
 		lv = 1;
 		health = h;
 		attack = at;
 		aumor = au;
 		resistance = r;
 		ability = ab;
+		money = m;
 	}
 
-	public String returnStatus() {
+	public String toString() {
 		return "level: " + lv + ", health: " + health + ", attack:" + attack + ", aumor: " + aumor + ", resistance: "
 				+ resistance + ", ability: " + ability;
 	}

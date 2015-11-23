@@ -8,6 +8,7 @@ public class Main {
 		System.out.println("无限地牢");
 		
 		Player mainPlayer = statusPoint.startStatus();
+		System.out.println(mainPlayer.toString());
 
 	}
 
