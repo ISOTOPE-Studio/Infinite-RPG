@@ -8,10 +8,10 @@ public class Main {
 		System.out.println("启动中...");
 		System.out.println("无限地牢");
 		
-		//Player mainPlayer = statusPoint.startStatus();
-		//System.out.println(mainPlayer.toString());
-		PropertiesFile.createFile();
-		PropertiesFile.writeProperties("save.properties", "test", "true");;
+		Player mainPlayer = statusPoint.startStatus();
+		System.out.println(mainPlayer.toString());
+		//PropertiesFile.createFile();
+		//PropertiesFile.writeProperties("save.properties", "test", "true");;
 	}
 
 }
