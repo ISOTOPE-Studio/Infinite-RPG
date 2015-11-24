@@ -11,15 +11,15 @@ public class ExceptionList {
 		int a = -1;
 		do {
 			try {
-				//System.out.println("fuck");
-				b=-1;
+				// System.out.println("fuck");
+				b = -1;
 				String s = sc.next();
-				a=Integer.parseInt(s);
+				a = Integer.parseInt(s);
 			} catch (Exception e) {
 				System.out.println("输入错误，再试一次吧");
 				b = 0;
 			}
-		}while (b == 0);
+		} while (b == 0);
 		return a;
 
 	}
@@ -30,11 +30,10 @@ public class ExceptionList {
 		Scanner sc = new Scanner(System.in);
 		String b;
 		b = sc.next();
-		while (b.length() >= n) {
+		while (b.length() > n) {
 			System.out.println("名字长度要小于" + n + "位喔~再输入一次吧");
 			b = sc.next();
 		}
-		;
 		return b;
 
 	}
