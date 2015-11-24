@@ -4,11 +4,11 @@ package character;
 import operation.statusPoint;
 
 public class Player extends Character {
-	public int ability;// fashuqiangdu
 	public String name;
+	public int ability;// fashuqiangdu
 	public int money;
 
-	public Player(String n,int h, int at, int au, int r, int ab,int m) {
+	public Player(String n, int h, int at, int au, int r, int ab, int m) {
 		name = n;
 		lv = 1;
 		health = h;
@@ -20,8 +20,8 @@ public class Player extends Character {
 	}
 
 	public String toString() {
-		return "level: " + lv + ", health: " + health + ", attack:" + attack + ", aumor: " + aumor + ", resistance: "
-				+ resistance + ", ability: " + ability;
+		return "name: " + name + ", level: " + lv + ", health: " + health + ", attack:" + attack + ", aumor: " + aumor
+				+ ", resistance: " + resistance + ", ability: " + ability + "money: " + money;
 	}
 
 }
