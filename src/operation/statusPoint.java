@@ -3,6 +3,7 @@ package operation;
 
 import character.*;
 import java.util.*;
+import control.ExceptionList;
 
 /**
  * 属性点
@@ -21,17 +22,16 @@ public class statusPoint {
 		String name; // 玩家姓名
 		String restart = "如果想重新输入，则输入负值";
 		String error = "输入错误，请重新输入";
-		Scanner type = new Scanner(System.in);
 
 		System.out.println("请输入游戏名字：");
-		name = type.next();
+		name = ExceptionList.scannerString(10);
 		System.out.println("你好，" + name);
 		System.out.println("你现在需要设定角色的初始数值，总值" + startStatusPoint + "，请认真选择");
 		System.out.println("");
 		while (!status) {
 			loop: {
 				System.out.println("现在请输入你的生命值：");
-				h = type.nextInt();
+				h = ExceptionList.scannerInt();
 				if (h < 0 || h > startStatusPoint) {
 					break loop;
 				}
@@ -40,7 +40,7 @@ public class statusPoint {
 					System.out.println(restart);
 					System.out.println("");
 					System.out.println("现在请输入你的攻击值：");
-					at = type.nextInt();
+					at = ExceptionList.scannerInt();
 					if (at < 0) {
 						break loop;
 					}
@@ -50,7 +50,7 @@ public class statusPoint {
 					System.out.println(restart);
 					System.out.println("");
 					System.out.println("现在请输入你的护甲值：");
-					au = type.nextInt();
+					au = ExceptionList.scannerInt();
 					if (au < 0) {
 						break loop;
 					}
@@ -60,7 +60,7 @@ public class statusPoint {
 					System.out.println(restart);
 					System.out.println("");
 					System.out.println("现在请输入你的魔抗值：");
-					r = type.nextInt();
+					r = ExceptionList.scannerInt();
 					if (r < 0) {
 						break loop;
 					}
@@ -72,7 +72,7 @@ public class statusPoint {
 					System.out.println("请输入你的魔法攻击值：");
 					System.out.println("（这是最后一个属性，如果有问题，则可以重新来过；）");
 					System.out.println("（如果没有问题，则直接输入能力值，剩余的能力值会转变为初始金币）");
-					ab = type.nextInt();
+					ab = ExceptionList.scannerInt();
 					if (ab < 0) {
 						break loop;
 					}
@@ -89,14 +89,14 @@ public class statusPoint {
 				System.out.println("魔抗值为：" + r);
 				System.out.println("魔法攻击为：" + ab);
 				System.out.println("是否确定？（1.是；2.否)");
-				int decide = type.nextInt();
+				int decide = ExceptionList.scannerInt();
 				if (decide == 2) {
 					break loop;
 				}
-			}
-			status = true;
+				status = true;
 
-			System.out.println("完成！");
+				System.out.println("完成！");
+			}
 		}	
 
 		Player newPlayer = new Player(name, h, at, au, r, ab, money);
