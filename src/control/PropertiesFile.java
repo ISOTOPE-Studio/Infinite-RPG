@@ -11,8 +11,8 @@ import java.util.Enumeration;
 import java.util.Properties;
 
 public class PropertiesFile {
-	public static void createFile() {
-		File file = new File("save.properties");
+	public static void createFile(String name) {
+		File file = new File(name + ".properties");
 		try (FileOutputStream fop = new FileOutputStream(file)) {
 
 			// if file doesn't exists, then create it
@@ -28,10 +28,10 @@ public class PropertiesFile {
 	public static String readValue(String filePath, String key) {
 		Properties props = new Properties();
 		try {
-			InputStream in = new BufferedInputStream(new FileInputStream(filePath));
+			InputStream in = new BufferedInputStream(new FileInputStream(filePath + ".properties"));
 			props.load(in);
 			String value = props.getProperty(key);
-			System.out.println(key + value);
+			// System.out.println(key + value);
 			return value;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -49,7 +49,7 @@ public class PropertiesFile {
 			while (en.hasMoreElements()) {
 				String key = (String) en.nextElement();
 				String Property = props.getProperty(key);
-				System.out.println(key + Property);
+				// System.out.println(key + Property);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
