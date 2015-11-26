@@ -1,14 +1,19 @@
 
 package operation;
 
+import java.awt.*;
+
+import javax.swing.*;
+
 import character.*;
 import control.ExceptionList;
+import control.Win;
 
 /**
  * 属性点
  */
 /**
- * @author hua
+ * @author Mars, Steve
  *
  */
 public class statusPoint {
@@ -21,6 +26,19 @@ public class statusPoint {
 		String name; // 玩家姓名
 		String restart = "如果想重新输入，则输入负值";
 		String error = "输入错误，请重新输入";
+
+		JFrame jfr = new JFrame("初始化");
+		Container c = jfr.getContentPane();
+
+		BoxLayout layout = new BoxLayout(c, BoxLayout.PAGE_AXIS);
+
+		JButton jbt = new JButton("OK");
+		JSpinner jh = new JSpinner();
+		c.setLayout(layout);
+		c.add(jbt);
+		c.add(jh); // jfr.setSize(800, 800);
+		// jfr.pack();
+		jfr.setVisible(true);
 
 		System.out.println("请输入游戏名字：");
 		name = ExceptionList.scannerString(10);
@@ -78,7 +96,7 @@ public class statusPoint {
 				System.out.println(restart);
 				System.out.println("现在请输入你的魔抗值：");
 				r = ExceptionList.scannerInt();
-				while (r < 0 || r > startStatusPoint - h - at - au - r) {
+				while (r < 0 || r > startStatusPoint - h - at - au) {
 					System.out.println(error);
 					r = ExceptionList.scannerInt();
 					if (r < 0) {
