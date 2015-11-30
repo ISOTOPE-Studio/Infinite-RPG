@@ -13,7 +13,7 @@ public class StatusPointInitialGUI extends JFrame {
 
 	int sizew = 400, sizeh = 500;
 	int x1 = sizew / 2 - 100;
-	int x2 = sizeh / 2+0;
+	int x2 = sizeh / 2 + 0;
 	int width = 90, height = 30;
 
 	private JLabel jlh = new JLabel("生命值");
@@ -140,8 +140,8 @@ public class StatusPointInitialGUI extends JFrame {
 				break;
 			}
 			case (4): {
-				jsr.setValue(
-						startStatusPoint - ((int) jsat.getValue() + (int) jsau.getValue() + (int) jsab.getValue()));
+				jsr.setValue(startStatusPoint - ((int) jsh.getValue() + (int) jsat.getValue() + (int) jsau.getValue()
+						+ (int) jsab.getValue()));
 				break;
 			}
 			case (5): {
