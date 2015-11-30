@@ -26,7 +26,6 @@ public class ExceptionList {
 
 	// forString
 	public static String scannerString(int n) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		String b;
 		b = sc.next();

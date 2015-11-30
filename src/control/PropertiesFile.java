@@ -75,10 +75,4 @@ public class PropertiesFile {
 		}
 	}
 
-	/*
-	 * public static void main(String[] args) {
-	 * 
-	 * readValue("info.properties", "url"); writeProperties("info.properties",
-	 * "age", "21"); readProperties("info.properties"); }
-	 */
 }

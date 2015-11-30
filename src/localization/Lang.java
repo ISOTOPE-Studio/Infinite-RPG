@@ -3,13 +3,13 @@ package localization;
 import control.PropertiesFile;
 
 public class Lang {
-	String language;
+	static String language;
 
-	public Lang(String lang) {
+	public static void setLang(String lang) {
 		language = lang;
 	}
 
-	public String get(String name) {
+	public static String get(String name) {
 		return PropertiesFile.readValue("src/localization/" + language, name);
 	}
 

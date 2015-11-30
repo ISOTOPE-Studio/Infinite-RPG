@@ -7,7 +7,7 @@ import javax.swing.*;
 
 import character.*;
 import control.ExceptionList;
-import control.Win;
+import gui.Win;
 
 /**
  * 属性点
@@ -26,7 +26,7 @@ public class statusPoint {
 		String name; // 玩家姓名
 		String restart = "如果想重新输入，则输入负值";
 		String error = "输入错误，请重新输入";
-
+/*
 		JFrame jfr = new JFrame("初始化");
 		Container c = jfr.getContentPane();
 
@@ -39,7 +39,7 @@ public class statusPoint {
 		c.add(jh); // jfr.setSize(800, 800);
 		// jfr.pack();
 		jfr.setVisible(true);
-
+*/
 		System.out.println("请输入游戏名字：");
 		name = ExceptionList.scannerString(10);
 		System.out.println("你好，" + name);

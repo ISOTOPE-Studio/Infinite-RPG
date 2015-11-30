@@ -3,6 +3,7 @@ package run;
 import operation.*;
 import character.*;
 import control.*;
+import gui.*;
 import localization.Lang;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
@@ -18,13 +19,19 @@ public class Main {
 		// PropertiesFile.createFile("settings");
 		// PropertiesFile.writeProperties("settings.properties", "lang",
 		// "Chinese");;
-		Lang lang = new Lang("Chinese");
+		Lang.setLang("Chinese");
 
 		// GUI
 
+		/*SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				JFrame jfr = new Win(Lang.get("gamename"));
+			}
+		});
+		*/
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				JFrame jfr = new Win(lang.get("gamename"));
+				JFrame jfr = new StatusPointInitialGUI();
 			}
 		});
 
